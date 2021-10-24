@@ -68,6 +68,7 @@ public class DiscriminantDAOImpl implements DiscriminantDAO {
 			discriminant.add(discriminantt);
 		}
 		System.out.println(discriminant); 
+		
 		return discriminant;
 	}
 }
