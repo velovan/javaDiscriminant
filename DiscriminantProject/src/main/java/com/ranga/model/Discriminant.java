@@ -66,6 +66,7 @@ public class Discriminant implements Serializable {
 
 	@Override
     public String toString() {
+	    
         return "Discriminant{" +
                 "id=" + id +
                 ", a='" + a + '\'' +
@@ -73,4 +74,5 @@ public class Discriminant implements Serializable {
                 ", c=" + c +
                 '}';
     } 
+	
 }
