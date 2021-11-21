@@ -30,6 +30,7 @@ public class DiscriminantController {
     @RequestMapping("createDiscriminant") 
     public ModelAndView createDiscriminant(@ModelAttribute Discriminant discriminant) { 
     	logger.info("Creating Discriminant. Data: "+ discriminant);
+	    
         return new ModelAndView("discriminantForm");
     }
     
@@ -37,6 +38,7 @@ public class DiscriminantController {
     public ModelAndView editDiscriminant(@RequestParam long id, @ModelAttribute Discriminant discriminant) {
     	logger.info("Updating the Discriminant for the Id "+id);
         discriminant = discriminantService.getDiscriminant(id);
+	    
         return new ModelAndView("discriminantForm", "discriminantObject", discriminant); 
     }
     
@@ -48,6 +50,7 @@ public class DiscriminantController {
         } else {
             discriminantService.updateDiscriminantt(discriminant);
         }
+	    
         return new ModelAndView("redirect:getAllDiscriminant"); 
     }
     
